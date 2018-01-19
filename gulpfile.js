@@ -32,7 +32,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('app/**/*.html', ['frontEnd']);
+    gulp.watch('index.html', ['frontEnd']);
     gulp.watch('app/**/*.scss', ['frontEnd']);
     gulp.watch('app/**/*.js', ['frontEnd']);
     gulp.watch('app/**/*.vue', ['frontEnd']);
