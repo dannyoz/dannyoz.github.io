@@ -1,11 +1,2 @@
 @import "../node_modules/spice-sass/src/spice";
-
-body{
-    background: #333;
-    color: #ddd;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.centre {
-    @include centre;
-}
+@import "./components/intro/intro";
