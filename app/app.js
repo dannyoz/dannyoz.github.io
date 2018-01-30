@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue.js';
-import index from './components/index.vue';
+import index from './components/main.vue';
 
 new Vue({
     el: '#do-app',
