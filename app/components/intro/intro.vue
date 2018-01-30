@@ -1,6 +1,7 @@
 <template>
     <div class="intro">
         <h1>{{title}}</h1>
+        <p>{{subtitle}}</p>
     </div>
 </template>
 
@@ -9,6 +10,7 @@
         data() {
             return {
                 title: 'Intro',
+                subtitle: 'Hello',
             }
         }
     }
