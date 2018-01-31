@@ -1,0 +1,12 @@
+{
+    "title": "Waste less Save more",
+    "details": "Lorem ipsum",
+    "tech-stack": [
+        "React",
+        "Flux",
+        "Superagent",
+        "Sonata cms",
+        "Gulp",
+        "GoCD"
+    ]
+}
