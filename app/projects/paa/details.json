@@ -1,0 +1,10 @@
+{
+    "title": "PAA",
+    "details": "Lorem ipsum",
+    "tech-stack": [
+        "Angular.js",
+        "Wordpress",
+        "Grunt",
+        "Snap.svg"
+    ]
+}
