@@ -10,7 +10,7 @@
         data() {
             return {
                 title: 'Intro',
-                subtitle: 'Hello',
+                subtitle: 'Subtitle goes here',
             }
         }
     }
