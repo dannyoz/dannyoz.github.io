@@ -33,10 +33,28 @@ gulp.task('sass', () => {
 });
 
 gulp.task('project-file', () => {
+    const projectList = [];
     const projects = fs.readdirSync('./app/projects').filter((value) => {
         return value !== '.DS_Store';
     });
-    console.log(projects);
+
+    projects.forEach((project, index) => {
+        const filePath = `./app/projects/${project}/details.json`;
+        fs.readFile(filePath, {encoding: 'utf8'}, (err, data) => {
+            if (err) { throw err; }
+            projectList.push(JSON.parse(data));
+            if (index == projects.length -1) { writeFile(); }
+        });
+    });
+
+    const writeFile = () => {
+        const string = JSON.stringify(projectList, null, '\t');
+        fs.writeFile('./app/projects.json', string, function(err) {
+            if (err) { throw err; }
+            console.log('done');
+        });
+    };
+
 });
 
 gulp.task('watch', () => {
