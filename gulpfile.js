@@ -7,6 +7,8 @@ const stripDebug = require('gulp-strip-debug');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const htmlmin = require('gulp-htmlmin');
+const connect = require('connect');
+const serveStatic = require('serve-static');
 const fs = require('fs');
 
 gulp.task('img', () => {
@@ -39,10 +41,16 @@ gulp.task('project-file', () => {
     });
 
     projects.forEach((project, index) => {
-        const filePath = `./app/projects/${project}/details.json`;
-        fs.readFile(filePath, {encoding: 'utf8'}, (err, data) => {
+        const filePath = `./app/projects/${project}`;
+
+        fs.readFile(`${filePath}/details.json`, {encoding: 'utf8'}, (err, data) => {
             if (err) { throw err; }
             projectList.push(JSON.parse(data));
+
+            // fs.readdir(`${filePath}/thumbnails`, (err, items) => {
+            //     projectList[index].thumbnails = items;
+            // });
+
             if (index == projects.length -1) { writeFile(); }
         });
     });
@@ -51,10 +59,16 @@ gulp.task('project-file', () => {
         const string = JSON.stringify(projectList, null, '\t');
         fs.writeFile('./app/projects.json', string, function(err) {
             if (err) { throw err; }
-            console.log('done');
+            console.log('Project file written');
         });
     };
 
+});
+
+gulp.task('serve', () => {
+    connect().use(serveStatic(__dirname)).listen(8080, function(){
+        console.log('Server running on 8080...');
+    });
 });
 
 gulp.task('watch', () => {

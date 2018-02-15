@@ -1,7 +1,7 @@
 <template>
     <div class="intro">
         <h1>{{title}}</h1>
-        <p>{{subtitle}}</p>
+        <h3>{{subtitle}}</h3>
     </div>
 </template>
 
@@ -9,7 +9,7 @@
     export default {
         data() {
             return {
-                title: 'Intro',
+                title: 'Intro goes here',
                 subtitle: 'Subtitle goes here',
             }
         }

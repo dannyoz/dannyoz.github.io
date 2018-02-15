@@ -1,2 +1,7 @@
 @import "../node_modules/spice-sass/src/spice";
+@include normalise;
+body {
+	font-family: "arial";
+	@include verticalRhythm;
+}
 @import "./components/intro/intro";
