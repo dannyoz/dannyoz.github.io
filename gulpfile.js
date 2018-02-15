@@ -46,14 +46,16 @@ gulp.task('project-file', () => {
         fs.readFile(`${filePath}/details.json`, {encoding: 'utf8'}, (err, data) => {
             if (err) { throw err; }
             projectList.push(JSON.parse(data));
-
-            // fs.readdir(`${filePath}/thumbnails`, (err, items) => {
-            //     projectList[index].thumbnails = items;
-            // });
-
-            if (index == projects.length -1) { writeFile(); }
+            writeThumbList(index, filePath);
         });
     });
+
+    const writeThumbList = (index, filePath) => {
+        fs.readdir(`${filePath}/thumbnails`, (err, items) => {
+            projectList[index].thumbnails = items;
+            if (index == projects.length -1) { writeFile(); }
+        });
+    };
 
     const writeFile = () => {
         const string = JSON.stringify(projectList, null, '\t');
