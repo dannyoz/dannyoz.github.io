@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'AdvoCut';
+    src:  url('../fonts/AdvoCut.ttf.woff') format('woff'),
+    url('../fonts/AdvoCut.ttf.svg#AdvoCut') format('svg'),
+    url('../fonts/AdvoCut.ttf.eot'),
+    url('../fonts/AdvoCut.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bangalore';
+    src:  url('../fonts/Bangalore.ttf.woff') format('woff'),
+    url('../fonts/Bangalore.ttf.svg#Bangalore') format('svg'),
+    url('../fonts/Bangalore.ttf.eot'),
+    url('../fonts/Bangalore.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bitmap-Regular';
+    src:  url('../fonts/Bitmap-Regular.ttf.woff') format('woff'),
+    url('../fonts/Bitmap-Regular.ttf.svg#Bitmap-Regular') format('svg'),
+    url('../fonts/Bitmap-Regular.ttf.eot'),
+    url('../fonts/Bitmap-Regular.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	background: #1e1e1e;
+	color: #CCC;
+	font-family: "AdvoCut";
+	@include verticalRhythm;
+
+	h1, h2, h3 ,h4, h5, h6 {
+		color: $col-river-blue;
+		font-family: "Bangalore";
+	}
+}
