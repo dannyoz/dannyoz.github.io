@@ -28,8 +28,12 @@
     font-style: normal;
 }
 
+$body: #232b2d;
+$primary: #f9ff30;
+$secondary: #ff906c;
+
 body {
-	background: #1e1e1e;
+	background: $body;
 	color: #CCC;
 	font-family: "AdvoCut";
 	@include verticalRhythm;
@@ -38,4 +42,23 @@ body {
 		color: $col-river-blue;
 		font-family: "Bangalore";
 	}
+
+	p {
+		text-shadow: 0 2px 0 black;
+	}
+}
+
+.primary {
+	color: $primary;
+	text-shadow: 0 5px 0 #1f673f;
+
+}
+
+.secondary {
+	color: $secondary;
+	text-shadow: 0 3px 0 #3e5b73;
+}
+
+.padded {
+	padding: 2rem;
 }
