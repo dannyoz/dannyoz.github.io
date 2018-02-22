@@ -1,0 +1,34 @@
+[
+	{
+		"title": "PAA",
+		"details": "Lorem ipsum",
+		"tech-stack": [
+			"Angular.js",
+			"Wordpress",
+			"Grunt",
+			"Snap.svg"
+		],
+		"thumbnails": [
+			"1.jpg",
+			"2.jpg",
+			"3.jpg"
+		]
+	},
+	{
+		"title": "Waste less Save more",
+		"details": "Lorem ipsum",
+		"tech-stack": [
+			"React",
+			"Flux",
+			"Superagent",
+			"Sonata cms",
+			"Gulp",
+			"GoCD"
+		],
+		"thumbnails": [
+			"1.jpg",
+			"2.jpg",
+			"3.jpg"
+		]
+	}
+]
