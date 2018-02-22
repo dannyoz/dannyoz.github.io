@@ -1,3 +1,8 @@
 .intro {
     @include fullScreen;
+
+    .padded {
+    	text-align: center;
+    	@include centre;
+    }
 }
