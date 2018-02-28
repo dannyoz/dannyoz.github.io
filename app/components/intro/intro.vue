@@ -12,8 +12,8 @@
     export default {
         data() {
             return {
-                title: 'Dan Osborne',
-                subtitle: 'Software developer',
+                title: 'Header',
+                subtitle: 'Subheading',
                 text: 'I have 10 years experience designing and building websites and apps in HTML Javascript and CSS...'
             }
         }
