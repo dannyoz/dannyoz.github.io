@@ -1,4 +1,37 @@
 .switcher {
 	display: block;
 	@include fullScreen;
+
+	&__view {
+		transition: all 1s $bounce;
+		@include fitContainer;
+
+		&.current-view {
+			transform: translateY(0);
+		}
+
+		&.next-view {
+			transform: translateY(100%);
+		}
+	}
+
+	.centred {
+		@include fontSize(80px);
+		@include centre;
+	}
+
+	nav {
+		bottom: 2rem;
+		@include centre(x);
+	}
+
+	&.exit {
+		.current-view {
+			transform: translateY(-100%);
+		}
+
+		.next-view {
+			transform: translateY(0);
+		}
+	}
 }
