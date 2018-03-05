@@ -22,7 +22,6 @@ gulp.task('browserify', () =>{
         .pipe(gbrowserify({
             transform: ['vueify','babelify']
         }))
-        .pipe(stripDebug())
         .pipe(uglify())
         .pipe(gulp.dest('./build/js'))
 });

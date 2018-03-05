@@ -36,11 +36,12 @@ body {
 	background: $body;
 	color: #CCC;
 	font-family: "AdvoCut";
-	@include verticalRhythm;
+	@include verticalRhythm(18px, 28px, 50px);
 
 	h1, h2, h3 ,h4, h5, h6 {
 		color: $col-river-blue;
 		font-family: "Bangalore";
+		text-transform: uppercase;
 	}
 
 	p {
