@@ -12,7 +12,6 @@
 			<button @click="swtichView('1')">1</button>
 			<button @click="swtichView('2')">2</button>
 			<button @click="swtichView('3')">3</button>
-			<button @click="swtichView('4')">4</button>
 		</nav>
 	</div>
 </template>
