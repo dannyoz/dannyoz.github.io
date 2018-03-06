@@ -24,6 +24,7 @@
 				currentView: null,
 				nextView: null,
 				animState: null,
+				views: [],
 			}
 		},
 		mounted() {
@@ -31,11 +32,10 @@
 				this.handleHash();
 			}
 
-			// TODO: fix this broken shit
-			// window.addEventListener('popstate', () => {
-			// 	console.log('Hash changed!!!');
-			// 	this.handleHash();
-			// });
+			window.addEventListener('popstate', () => {
+				console.log('Hash changed!!!');
+				this.handleHash();
+			});
 		},
 		methods: {
 			swtichView(view) {
