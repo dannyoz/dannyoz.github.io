@@ -24,6 +24,7 @@
 				currentView: null,
 				nextView: null,
 				animState: null,
+				views: [],
 			}
 		},
 		mounted() {
